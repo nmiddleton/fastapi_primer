@@ -34,16 +34,7 @@ Or, install the packages manually. finally create a requirements.txt for others 
 # Pip install?
 If this project is going to be a pip installable, a setup.py will be needed (this is out of scope)
 
-# Project folders
-For the most part, only code is kept under the src directory.
-When creating subdirectories, if you need some code to be importable, then put an empty file __.init.py__ in the folder with the code. This allows python to recognise the code there as an importable package.
-e.g. if you have a python file like..
-`./src/services/azurestorage/blobservice.py`
+# Structure
+Under the source directory are several folders that come together in the "main.py" file. This is a common python convention where, in this case, main.py imports the api, services and the website controller. When main.py is run, the __main__ function sets up configuration and runs the site using uvicorn (a basic webserver).
 
-Then add a file to the same dir
-
-`./src/services/azurestorage/__init.py__`
-
-Then this package can be imported into any other python files via
-
-`from services.azurestorage import blobservice`
+Note in this set-up that rather than have the api define all the api endpoints, there is a "routing" component that is common to product development design in most. We see here it brings
