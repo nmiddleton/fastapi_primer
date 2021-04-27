@@ -260,5 +260,13 @@ paket-files/
 __pycache__/
 *.pyc
 
+# Python virtualenv
+.venv
+
 # Compodoc
 documentation/
+
+# Visual Studio Code
+.vscode/
+
+
