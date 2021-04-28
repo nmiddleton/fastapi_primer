@@ -1,7 +1,7 @@
 import unittest
 from pydantic import BaseModel
 
-from location import Location
+from models.location import Location
 
 class Test(unittest.TestCase):
     def setUp(self):
