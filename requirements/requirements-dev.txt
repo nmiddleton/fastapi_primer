@@ -1,1 +1,4 @@
 # additional packages just used in development
+pytest
+starlette
+requests
