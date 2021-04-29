@@ -14,8 +14,3 @@ def fixture_test_api():
     client = TestClient(api)
     yield client  # testing happens here
 
-
-@pytest.fixture(scope="module")
-def fixture_test_service():
-    client = TestClient(openweather_service)
-    yield client  # testing happens here
